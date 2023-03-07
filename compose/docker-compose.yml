@@ -1,12 +1,12 @@
 version: '3'
 services:
   vpronginx:
-    image: visualpath/vpronginx
+    image: situndevops/vprofileweb:V1
     ports:
       - "80:80"
 
   vproapp:
-    image: imranvisualpath/vproappfix
+    image: situndevops/vprofileapp:V1
     ports:
       - "8080:8080"
 
@@ -24,7 +24,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=guest
 
   vprodb:
-    image: imranvisualpath/vprdbfix
+    image: situndevops/vprofiledb:V1
     ports:
       - "3306:3306"
     volumes:
